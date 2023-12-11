@@ -1,0 +1,16 @@
+html {
+  color: #f8fafc;
+  background-color: #0f172a;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}

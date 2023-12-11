@@ -1,16 +1,49 @@
 ---
-
+import Navigation from '../components/Navigation.astro';
+import Social from '../components/Social.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css'
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Ervic Padilla</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navigation />
+		<main>
+			<header class="flex justify-center items-center">
+				<div class="mt-8">
+					<div class="flex text-3xl font-extrabold">
+						<h1>Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Ervic Padilla</span></h1>
+					</div>
+					<p>Greetings from my small piece of the Internet!  I am a graduate at the Polytechnic University of the Philippines studying computer science. I am experimenting with new web application technologies and learning frontend tools.</p>	
+				</div>
+				<div class="flex flex-col ml-8">
+					<img src="/author.png" alt="The author" class="w-40 rounded-br-lg">
+					<Social />
+				</div>
+			</header>
+			<section>
+				<h3>Favorite technologies</h3>
+				<p>The technologies I have worked with are listed below:</p>
+				<ul>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>JavaScript/ES6</li>
+					<li>Astro</li>
+					<li>React</li>
+					<li>Tailwind CSS</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
 	</body>
 </html>
