@@ -1,3 +1,41 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Social from '../components/Social.astro';
+import Technologies from '../components/Technologies.astro'
+import Projects from '../components/Projects.astro'
+import Footer from '../components/Footer.astro';
+import '../styles/global.css'
 
+const {author} = Astro.props;
 ---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{author}</title>
+	</head>
+	<body class="min-h-screen flex flex-col max-w-5xl">
+		<main class="flex-grow flex flex-col gap-8 mx-2">
+			<Navigation />
+            <header class="flex items-center justify-between gap-8 mt-6 mb-12">
+                <div id="author-profile" class="flex flex-col justify-center gap-4 max-w-xl">
+                    <div class="flex text-3xl font-extrabold">
+                        <h1>Hi, I'm <span class="gradient">{author}</span>.</h1>
+                    </div>
+                    <p>Greetings from my small piece of the Internet!  I am a graduate at the Polytechnic University of the Philippines studying computer science. I am experimenting with new web application technologies and learning frontend tools.</p>	
+                    <Social />
+                </div>
+                <img id="author-image" src="/author.png" alt="The author" class="w-80 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full">
+            </header>
+			<Technologies />
+			<Projects />
+		</main>
+		<Footer author={author}/>
+	</body>
+</html>
