@@ -16,31 +16,43 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 		<title>Ervic Padilla</title>
 	</head>
-	<body>
-		<Navigation />
-		<main>
-			<header class="flex justify-center items-center">
-				<div class="mt-8">
+	<body class="min-h-screen flex flex-col max-w-5xl">
+		<main class="flex-grow flex flex-col gap-4">
+			<Navigation />
+			<header class="flex justify-between mt-6">
+				<div id="author-profile" class="flex flex-col justify-center gap-4 max-w-xl">
 					<div class="flex text-3xl font-extrabold">
-						<h1>Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Ervic Padilla</span></h1>
+						<h1>Hello, I'm <span class="gradient">Ervic Padilla</span></h1>
 					</div>
 					<p>Greetings from my small piece of the Internet!  I am a graduate at the Polytechnic University of the Philippines studying computer science. I am experimenting with new web application technologies and learning frontend tools.</p>	
-				</div>
-				<div class="flex flex-col ml-8">
-					<img src="/author.png" alt="The author" class="w-40 rounded-br-lg">
 					<Social />
 				</div>
+				<img id="author-image" src="/author.png" alt="The author" class="rounded-full w-80 bg-slate-800">
 			</header>
 			<section>
-				<h3>Favorite technologies</h3>
+				<h2 class="text-2xl font-extrabold">Favorite <span class="gradient">technologies</span></h2>
 				<p>The technologies I have worked with are listed below:</p>
-				<ul>
-					<li>HTML5</li>
-					<li>CSS3</li>
-					<li>JavaScript/ES6</li>
-					<li>Astro</li>
-					<li>React</li>
-					<li>Tailwind CSS</li>
+				<ul class="">
+					<li class="skill-icons">
+						<img src="/icons/javascript.svg" class="icon"></img>
+						JavaScript/ES6
+					</li>
+					<li class="skill-icons">
+						<img src="/icons/tailwindcss.svg" class="icon"></img>
+						Tailwind CSS
+					</li>
+					<li class="skill-icons">
+						<img src="/icons/react.svg" class="icon"></img>
+						React
+					</li>
+					<li class="skill-icons">
+						<img src="/icons/astro.svg" class="icon"></img>
+						Astro
+					</li>
+					<li class="skill-icons">
+						<img src="/icons/python.svg" class="icon"></img>
+						Python
+					</li>
 				</ul>
 			</section>
 		</main>
