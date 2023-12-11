@@ -17,9 +17,9 @@ import '../styles/global.css'
 		<title>Ervic Padilla</title>
 	</head>
 	<body class="min-h-screen flex flex-col max-w-5xl">
-		<main class="flex-grow flex flex-col gap-4">
+		<main class="flex-grow flex flex-col gap-8 mx-2">
 			<Navigation />
-			<header class="flex justify-between mt-6">
+			<header class="flex items-center justify-between gap-8 mt-6">
 				<div id="author-profile" class="flex flex-col justify-center gap-4 max-w-xl">
 					<div class="flex text-3xl font-extrabold">
 						<h1>Hello, I'm <span class="gradient">Ervic Padilla</span></h1>
@@ -27,31 +27,35 @@ import '../styles/global.css'
 					<p>Greetings from my small piece of the Internet!  I am a graduate at the Polytechnic University of the Philippines studying computer science. I am experimenting with new web application technologies and learning frontend tools.</p>	
 					<Social />
 				</div>
-				<img id="author-image" src="/author.png" alt="The author" class="rounded-full w-80 bg-slate-800">
+				<img id="author-image" src="/author.png" alt="The author" class="w-80 bg-orange-500 rounded-full">
 			</header>
 			<section>
-				<h2 class="text-2xl font-extrabold">Favorite <span class="gradient">technologies</span></h2>
-				<p>The technologies I have worked with are listed below:</p>
-				<ul class="">
+				<div class="mb-4">
+					<h2 class="text-2xl font-extrabold">Favorite <span class="gradient">technologies</span></h2>
+					<p>
+						The technologies I have worked with are listed below:
+					</p>
+				</div>
+				<ul class="flex items-center gap-8 flex-wrap">
 					<li class="skill-icons">
-						<img src="/icons/javascript.svg" class="icon"></img>
+						<img src="/icons/javascript.svg" alt="JavaScript icon" class="icon"></img>
 						JavaScript/ES6
 					</li>
 					<li class="skill-icons">
-						<img src="/icons/tailwindcss.svg" class="icon"></img>
+						<img src="/icons/typescript.svg" alt="Python icon" class="icon"></img>
+						TypeScript
+					</li>
+					<li class="skill-icons">
+						<img src="/icons/tailwindcss.svg" alt="Tailwind CSS icon" class="icon"></img>
 						Tailwind CSS
 					</li>
 					<li class="skill-icons">
-						<img src="/icons/react.svg" class="icon"></img>
+						<img src="/icons/react.svg" alt="React framework icon" class="icon"></img>
 						React
 					</li>
 					<li class="skill-icons">
-						<img src="/icons/astro.svg" class="icon"></img>
+						<img src="/icons/astro.svg" alt="Astro framework icon" class="icon"></img>
 						Astro
-					</li>
-					<li class="skill-icons">
-						<img src="/icons/python.svg" class="icon"></img>
-						Python
 					</li>
 				</ul>
 			</section>
