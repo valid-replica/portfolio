@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation.astro';
 import Social from '../components/Social.astro';
 import Technologies from '../components/Technologies.astro'
 import Projects from '../components/Projects.astro'
+import Blogs from '../components/Blogs.astro'
 import Footer from '../components/Footer.astro';
 import '../styles/global.css'
 
@@ -24,7 +25,7 @@ const {author} = Astro.props;
 		<main class="flex-grow flex flex-col gap-8 mx-2">
 			<Navigation />
             <header class="flex items-center justify-between gap-8 mt-6 mb-12">
-                <div id="author-profile" class="flex flex-col justify-center gap-4 max-w-xl">
+                <div id="author-profile" class="flex flex-col justify-center gap-4 max-w-lg">
                     <div class="flex text-3xl font-extrabold">
                         <h1>Hi, I'm <span class="gradient">{author}</span>.</h1>
                     </div>
@@ -35,6 +36,7 @@ const {author} = Astro.props;
             </header>
 			<Technologies />
 			<Projects />
+			<Blogs />
 		</main>
 		<Footer author={author}/>
 	</body>
