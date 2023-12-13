@@ -2,10 +2,12 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import BlogList from "../components/BlogList.astro";
 
+const blogs = await getCollection("blogs");
 ---
 
 <BaseLayout title="Blogs | Ervic Padilla">
     <Header text="Blogs" description="This is a description"/>
-
+    <BlogList blogs={blogs} />
 </BaseLayout>

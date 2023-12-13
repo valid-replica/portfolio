@@ -6,7 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Ervic Padilla">
-    <header class="flex items-center justify-between gap-8 mt-6 mb-12">
+    <header class="flex items-center justify-between gap-8 mt-6 mb-12 max-sm:flex-col">
         <div id="author-profile" class="flex flex-col justify-center gap-4 max-w-lg">
             <div class="flex text-3xl font-extrabold">
                 <h1>Hi, I'm <span class="text-gradient">Ervic Padilla</span>.</h1>
@@ -56,10 +56,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2 class="text-2xl font-extrabold">Recent <span class="text-gradient">Projects</span></h2>
         <a href="/project/" class="hover:underline active:scale-95">View all projects &rarr;</a>
     </div>
+    <ul id="recentProjects">
+        {
+
+        }
+    </ul>
     <Projects />
     <div class="flex justify-between items-center mt-8 max-sm:flex-col">
         <h2 class="text-2xl font-extrabold">Featured <span class="text-gradient">Blogs</span></h2>
         <a href="/blog/"  class="hover:underline active:scale-95">View all blogs &rarr;</a>
     </div>
+    <ul id="featuredBlogs">
+        {
+            
+        }
+    </ul>
     <Blogs />
 </BaseLayout>
+

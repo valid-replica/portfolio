@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from 'astro:assets';
+
+type Props = {
+    blog: CollectionEntry<"blogs">;
+};
+
+const { blog } = Astro.props;
+---
+
+<article>
+    <a href={`/blog/${blog.slug}`}>
+        <Image 
+        src={blog.data.image} 
+        alt={blog.data.title}
+        width={600}
+        height={600 / 1.5}
+        class="rounded-2xl mb-4 aspect-video object-cover"
+        >
+        <h2>{blog.data.title}</h2>
+        <h3 class="text-slate-400">{blog.data.date.toDateString()}</h3>
+    </a>
+</article>

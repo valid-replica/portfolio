@@ -25,15 +25,7 @@ body {
 	}
 }
 
-.icon {
-	height: 48px;
-	width: 48px;
-}
-
 @media (max-width: 640px) {
-	header {
-		flex-direction: column;
-	}
 	#author-image {
 		order: 1;
 		width: 16rem;
