@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Heading from "../components/Heading.astro";
+
+const blogs = await getCollection("blogs");
+console.log(blogs);
+---
+
+<BaseLayout title="Blog | Ervic Padilla">
+    <Heading text="Blogs"/>
+
+</BaseLayout>
