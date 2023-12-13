@@ -17,19 +17,25 @@ type Props = CollectionEntry<"blogs">
 
 const blog = Astro.props;
 const { Content } = await blog.render();
+console.log(blog)
 ---
 
 <BaseLayout title={blog.data.title}>
-    <h1 class="text-5xl text-center mt-12 font-extrabold">{blog.data.title}</h1>
-    <h3 class="text-center text-slate-400">{blog.data.date.toDateString()}</h3>
+    <h1 class="text-5xl text-center mt-12 font-extrabold">
+        {blog.data.title}
+    </h1>
+    <h3 class="text-center text-slate-400">
+        {blog.data.date.toDateString()}
+    </h3>
     <Image 
         src={blog.data.image} 
         alt={blog.data.title}
         width={1024}
         height={1024 / 1.5}
         class="rounded-2xl mb-4 aspect-video object-cover"
-        >
+    >
     <div class="prose prose-2xl lg:prose-xl text-slate-50">
+        <p class="mb-4">{blog.data.description}</p>
         <Content />
     </div>
 </BaseLayout>
