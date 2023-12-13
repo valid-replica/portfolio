@@ -2,7 +2,6 @@
 import Blogs from '../components/Blogs.astro';
 import Projects from '../components/Projects.astro';
 import Social from '../components/Social.astro';
-import Technologies from '../components/Technologies.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -10,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <header class="flex items-center justify-between gap-8 mt-6 mb-12">
         <div id="author-profile" class="flex flex-col justify-center gap-4 max-w-lg">
             <div class="flex text-3xl font-extrabold">
-                <h1>Hi, I'm <span class="gradient">Ervic Padilla</span>.</h1>
+                <h1>Hi, I'm <span class="text-gradient">Ervic Padilla</span>.</h1>
             </div>
             <p>Greetings from my small piece of the Internet!  I am a graduate at the Polytechnic University of the Philippines studying computer science. I am experimenting with new web application technologies and learning frontend tools.</p>	
             <Social />
@@ -23,7 +22,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <img id="author-image" src="/author.png" alt="The author" class="w-80 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full"> 
     </header>
-    <Technologies />
+    <section class="mb-12">
+        <div class="mb-6">
+            <h2 class="text-2xl font-extrabold mb-2">Favorite <span class="text-gradient">Technologies</span></h2>
+            <p>
+                The technologies I have worked with are listed below:
+            </p>
+        </div>
+        <ul class="flex items-center gap-8 flex-wrap">
+            <li class="flex flex-row items-center gap-2">
+                <img src="/icons/javascript.svg" alt="JavaScript icon" class="rounded-md bg-slate-800 p-2 w-12 h-12"></img>
+                JavaScript/ES6
+            </li>
+            <li class="flex flex-row items-center gap-2">
+                <img src="/icons/typescript.svg" alt="TypeScript icon" class="rounded-md bg-slate-800 p-2 w-12 h-12"></img>
+                TypeScript
+            </li>
+            <li class="flex flex-row items-center gap-2">
+                <img src="/icons/tailwindcss.svg" alt="Tailwind CSS icon" class="rounded-md bg-slate-800 p-2 w-12 h-12"></img>
+                Tailwind CSS
+            </li>
+            <li class="flex flex-row items-center gap-2">
+                <img src="/icons/react.svg" alt="React framework icon" class="rounded-md bg-slate-800 p-2 w-12 h-12"></img>
+                React
+            </li>
+            <li class="flex flex-row items-center gap-2">
+                <img src="/icons/astro.svg" alt="Astro framework icon" class="rounded-md bg-slate-800 p-2 w-12 h-12"></img>
+                Astro
+            </li>
+        </ul>
+    </section>
+    <div class="flex justify-between items-center mt-8 max-sm:flex-col">
+        <h2 class="text-2xl font-extrabold">Recent <span class="text-gradient">Projects</span></h2>
+        <a href="/project/" class="hover:underline active:scale-95">View all projects &rarr;</a>
+    </div>
     <Projects />
+    <div class="flex justify-between items-center mt-8 max-sm:flex-col">
+        <h2 class="text-2xl font-extrabold">Featured <span class="text-gradient">Blogs</span></h2>
+        <a href="/blog/"  class="hover:underline active:scale-95">View all blogs &rarr;</a>
+    </div>
     <Blogs />
 </BaseLayout>

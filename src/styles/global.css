@@ -3,48 +3,42 @@
 @tailwind utilities;
 
 html {
-  color: #f8fafc;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+	color: #f8fafc;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
 }
 
 body {
-  margin: 0 auto;
-  padding: 1rem;
-  line-height: 1.5;
+	margin: 0 auto;
+	padding: 1rem;
+	line-height: 1.5;
 }
 
 * {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 @layer components {
-  .gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500;
-  }
-  .icon {
-    @apply bg-slate-800 p-2 rounded-md;
-  }
-  .skill-item {
-    @apply flex flex-row items-center gap-2;
-  }
+	.text-gradient {
+		@apply bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent;
+	}
 }
 
 .icon {
-  height: 48px;
-  width: 48px;
+	height: 48px;
+	width: 48px;
 }
 
 @media (max-width: 640px) {
-  header {
-    flex-direction: column;
-  }
-  #author-image {
-    order: 1;
-    width: 16rem;
-  }
-  #author-profile {
-    order: 2;
-  }
+	header {
+		flex-direction: column;
+	}
+	#author-image {
+		order: 1;
+		width: 16rem;
+	}
+	#author-profile {
+		order: 2;
+	}
 }
