@@ -8,15 +8,15 @@ type Props = {
 const { post } = Astro.props;
 ---
 
-<article>
-    <a href={`/blog/${post.slug}`}>
-        <h2>
-            {post.data.title}
-        </h2>
+<article class="text-md">
+    <a href={`/blog/${post.slug}`} class="flex flex-col gap-2 hover:bg-slate-800 p-6">
         <time class="text-slate-400">
             {post.data.date.toDateString()}
         </time>
-        <p>
+        <h2 class="text-lg font-bold">
+            {post.data.title}
+        </h2>
+        <p class="text-slate-400">
             {post.data.description}
         </p>
     </a>
