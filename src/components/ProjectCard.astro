@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+    post: CollectionEntry<"project">;
+};
+
+const { post } = Astro.props;
+---
+
+<article>
+    <a href={`/project/${post.slug}`}>
+        <h2>
+            {post.data.title}
+        </h2>
+        <ul class="flex">
+            {
+                post.data.tags.map((tag) => 
+                    <li>{tag}</li>
+                )
+            }    
+        </ul>
+        <p>
+            {post.data.description}
+        </p>
+    </a>
+</article>

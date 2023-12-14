@@ -9,17 +9,15 @@ const projectCollection = defineCollection({
 })
 
 const blogCollection = defineCollection({
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			date: z.date(),
-			image: image(),
-			description: z.string(),
-			featured: z.boolean().default(false)
-		})
+	schema: z.object({
+		title: z.string(),
+		date: z.date(),
+		description: z.string(),
+		featured: z.boolean().default(false)
+	})
 })
 
 export const collections = {
-	projects: projectCollection,
-	blogs: blogCollection
+	project: projectCollection,
+	blog: blogCollection
 }

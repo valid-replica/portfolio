@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectCard from "./ProjectCard.astro"
+
+type Props = {
+    post: CollectionEntry<"project">[];
+};
+
+const {post} = Astro.props;
+---
+
+<section class="grid gap-12 mb-12">
+    {post.map((post) => <ProjectCard post={post} />)}
+</section>

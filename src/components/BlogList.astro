@@ -1,15 +1,14 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Blog from "./Blog.astro"
-
+import BlogCard from "./BlogCard.astro"
 
 type Props = {
-    blogs: CollectionEntry<"blogs">[];
+    post: CollectionEntry<"blog">[];
 };
 
-const {blogs} = Astro.props;
+const {post} = Astro.props;
 ---
 
-<section class="grid grid-cols-2 max-sm:grid-cols-1 gap-12 mb-24">
-    {blogs.map((blog) => <Blog blog={blog} />)}
+<section class="grid gap-12 mb-12">
+    {post.map((post) => <BlogCard post={post} />)}
 </section>
