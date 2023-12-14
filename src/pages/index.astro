@@ -1,8 +1,12 @@
 ---
-import Blogs from '../components/Blogs.astro';
-import Projects from '../components/Projects.astro';
+import BlogCard from '../components/BlogCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 import Social from '../components/Social.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection("project");
+const blogs = await getCollection("blog")
 ---
 
 <BaseLayout title="Ervic Padilla">
@@ -54,24 +58,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </ul>
     </section>
     <div class="flex justify-between items-center max-sm:flex-col">
-        <h2 class="text-2xl font-extrabold">Recent <span class="text-gradient">Projects</span></h2>
+        <h2 class="text-2xl font-extrabold">Featured <span class="text-gradient">Projects</span></h2>
         <a href="/project/" class="hover:underline active:scale-95">View all projects &rarr;</a>
     </div>
-    <!-- <ul id="recentProjects">
+    <section class="grid gap-4">
         {
-
+            projects.map((post) => (
+                post.data.featured ? <ProjectCard post={post} /> : null
+            ))
         }
-    </ul> -->
-    <Projects />
+    </section>
     <div class="flex justify-between items-center mt-8 max-sm:flex-col">
         <h2 class="text-2xl font-extrabold">Featured <span class="text-gradient">Blogs</span></h2>
         <a href="/blog/"  class="hover:underline active:scale-95">View all blogs &rarr;</a>
     </div>
-    <!-- <ul id="featuredBlogs">
+    <section class="grid gap-4 border-l border-slate-800">
         {
-            
+            blogs.map((post) => (
+                post.data.featured ? <BlogCard post={post} /> : null
+            ))
         }
-    </ul> -->
-    <Blogs />
+    </section>
 </BaseLayout>
 
