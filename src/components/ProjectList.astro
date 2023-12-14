@@ -9,6 +9,6 @@ type Props = {
 const {post} = Astro.props;
 ---
 
-<section class="grid gap-12 mb-12">
+<section class="grid grid-cols-2 gap-12 mb-12">
     {post.map((post) => <ProjectCard post={post} />)}
 </section>
