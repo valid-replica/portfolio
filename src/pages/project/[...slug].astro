@@ -23,13 +23,6 @@ const { Content } = await post.render();
     <h1 class="text-5xl max-sm:text-3xl text-center mt-12 font-extrabold">
         {post.data.title}
     </h1>
-    <ul class="flex">
-        {
-            post.data.tags.map((tag) => 
-                <li>{tag}</li>
-            )
-        }    
-    </ul>
     <Prose>
         <Content />
     </Prose>
