@@ -1,6 +1,6 @@
 ---
 title: How I made this website
-date: 2023-12-16
+date: 2023-12-15
 description: and problems I encountered and how I solved it
 featured: true
 ---
@@ -27,8 +27,10 @@ To display these posts, still in the documentation, it said to query the collect
 
 I just want to display my featured projects and blogs to my home. I added "featured" boolean in the schema in `config.ts` so that I can just loop through the collection and if the collection has a "featured" ticked on true it will display on the homepage.
 
-Lastly, my site needed some animations. Astro has this built-in and it's called View Transitions. To use it, I just inserted two lines of code. `import { ViewTransitions } from 'astro:transitions';` and adding `<ViewTransitions />` in the HTML head.
+My site needed some animations. Astro has this built-in and it's called View Transitions. To use it, I just inserted two lines of code. `import { ViewTransitions } from 'astro:transitions';` and adding `<ViewTransitions />` in the HTML head.
 
 ![home page](./images/home-page.png)
 
-Now my website is finished. I will probably do this again in the future when I feel like it needs updating.
+Lastly, all that's left is to deploy my site using GitHub Pages, luckily the Astro documentation provides instruction on how to do so. It recommended using GitHub Actions and adding some configs in order to deploy my site.
+
+Now my website is finished and I have learned a lot! I will probably do this again in the future when I feel like it needs updating.

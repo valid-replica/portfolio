@@ -1,6 +1,6 @@
 ---
 title: Uses 2023
-date: 2023-12-17
+date: 2023-12-16
 description: Stuff that I use on a daily basis
 featured: true
 ---
