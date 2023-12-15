@@ -1,4 +1,4 @@
-# valid-replica.github.io/
+# [valid-replica.github.io](https://valid-replica.github.io/)
 
 A simple responsive personal website built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/)
 
